@@ -1,8 +1,7 @@
 const fastify = require("fastify");
 const { sequelize } = require("./db");
-const userRoutes = require("./routes/userRoutes");
+const allRoutes = require("./routes");
 const fastifyRedis = require("fastify-redis");
-const redisRoutes = require("./routes/redisRoutes");
 
 const app = fastify();
 
@@ -12,10 +11,8 @@ app.register(fastifyRedis, {
   port: 6379, // Redis server port
 });
 
-// Register Redis routes
-app.register(redisRoutes);
-
-app.register(userRoutes);
+// register all routes
+app.register(allRoutes);
 
 async function startApp() {
   try {
