@@ -1,0 +1,22 @@
+{
+  "name": "fastify-redis",
+  "version": "1.0.0",
+  "description": "Fastify application with Redis integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fastify",
+    "redis",
+    "node",
+    "javascript"
+  ],
+  "author": "Esrafil",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.17.0",
+    "fastify-redis": "^5.0.0",
+    "redis": "^4.0.0"
+  }
+}
