@@ -1,10 +1,7 @@
-const fastify = require("fastify");
-const UserController = require("../controllers/userController");
+const { getUser } = require("../controllers/userController");
 
-const router = fastify();
-const userController = new UserController();
+function userRoutes(app) {
+  app.get("/users/:id", getUser);
+}
 
-// Define the user route
-router.get("/:id", userController.getUser);
-
-module.exports = router;
+module.exports = userRoutes;
