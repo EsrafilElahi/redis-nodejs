@@ -4,7 +4,7 @@ const allRoutes = require("./routes");
 const fastifyRedis = require("fastify-redis");
 
 const app = fastify();
-
+ 
 // Register Redis plugin
 app.register(fastifyRedis, {
   host: "localhost", // Redis server host
